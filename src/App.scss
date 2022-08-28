@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  background-color: aquamarine;
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10vh auto 0 auto;
+  background-color: bisque;
+  width: 500px;
+  height: 80vh;
+  border-radius: 5px;
+  padding: 10px 0;
+}
+
+.navbar {
+  padding: 0;
+  margin-top: 5px;
+  width: 500px;
+  height: 40px;
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 40px;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    li {
+      width: 50%;
+      height: 100%;
+      text-align: center;
+      border-radius: 5px;
+      &:hover {
+        background-color: rgb(248, 208, 155);
+        cursor: pointer;
+      }
+      a {
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.802);
+        font-weight: 500;
+        font-size: 20px;
+        display: block;
+        line-height: 40px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.form {
+  flex-direction: row;
+  margin-top: 20px;
+
+  input {
+    caret-color: rgba(254, 44, 85, 1);
+    font-weight: 400;
+    font-size: 20px;
+    outline: none;
+    background-color: rgba(22, 24, 35, 0.06);
+    border: none;
+    line-height: 40px;
+    width: 350px;
+    border-radius: 10px;
+    padding: 5px 15px;
+  }
+  .addBtn {
+    padding: 5px 10px;
+    min-width: 100px;
+    line-height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    background-color: green;
+    color: white;
+    transition: 0.2s ease-in-out;
+    margin-left: 20px;
+    &:hover {
+      background-color: rgb(2, 114, 2);
+    }
+  }
+  .updateBtn {
+    @extend .addBtn;
+    background-color: rgb(61, 61, 254);
+    &:hover {
+      background-color: rgb(47, 47, 203);
+    }
+  }
+}
+
+.todoList {
+  height: 100%;
+  ul {
+    list-style: none;
+    padding: 0;
+    li {
+      margin-top: 20px;
+      height: 50px;
+      span {
+        width: 338px;
+        display: inline-block;
+        font-size: 20px;
+        line-height: 40px;
+        padding: 0 10px;
+      }
+      button {
+        i {
+          font-size: 18px;
+        }
+      }
+      button:first-of-type {
+        i {
+          color: rgb(10, 171, 10);
+        }
+        &:hover {
+          border: 1px solid rgb(10, 171, 10);
+        }
+      }
+      button:nth-of-type(2) {
+        i {
+          color: rgb(61, 61, 254);
+        }
+        &:hover {
+          border: 1px solid rgb(61, 61, 254);
+        }
+      }
+      button:last-of-type {
+        i {
+          color: red;
+        }
+        &:hover {
+          border: 1px solid red;
+        }
+      }
+    }
+  }
+}
+
+.completed {
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  li {
+    opacity: 0.6;
+    text-decoration: line-through;
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}
