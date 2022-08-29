@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 body {
-  height: 100vh;
   background-color: aquamarine;
 }
 .App {
@@ -14,9 +13,19 @@ body {
   margin: 10vh auto 0 auto;
   background-color: bisque;
   width: 500px;
-  height: 80vh;
+  height: 550px;
   border-radius: 5px;
   padding: 10px 0;
+  overflow: hidden;
+  .add{
+    height: 100%;
+    padding: 0 10px;
+    width: 100%;
+    overflow: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
 }
 
 .navbar {
@@ -97,7 +106,6 @@ body {
 }
 
 .todoList {
-  height: 100%;
   ul {
     list-style: none;
     padding: 0;
@@ -144,11 +152,15 @@ body {
   }
 }
 
-.completed {
+.App .completed {
   height: 100%;
   width: 100%;
   padding: 10px;
   margin-top: 20px;
+  overflow: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
   ul {
     list-style: none;
     padding: 0;

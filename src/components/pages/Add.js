@@ -4,7 +4,7 @@ import TodoList from '../TodoList'
 function Add({todoApp,dispatch}) {
 
   return ( 
-    <div>
+    <div className="add">
       <Form todoApp={todoApp} dispatch={dispatch} />
       <TodoList todoApp={todoApp} dispatch={dispatch} />
     </div>
